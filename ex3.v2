@@ -1,0 +1,174 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "bool"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "5 == 5\n",
+    "type(True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "5 == 6"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Type in the hours worked: \n",
+      "45\n",
+      "Type in the rate: \n",
+      "10\n",
+      "The salary is 475.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercice 3.11 No.1\n",
+    "hours = input('Type in the hours worked: \\n')\n",
+    "rate = input('Type in the rate: \\n')\n",
+    "\n",
+    "hours = float(hours)\n",
+    "rate = float(rate)\n",
+    "if hours > 40:\n",
+    "    salary = (hours-40) * 1.5 * rate + 40*rate\n",
+    "else:\n",
+    "    salary = hours * rate\n",
+    "    \n",
+    "print('The salary is',salary)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Type in the worked hours:\n",
+      "10\n",
+      "Type in the rate:\n",
+      "15\n",
+      "The salary is 150.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 3.11 No.2\n",
+    "\n",
+    "try:\n",
+    "    hours = input('Type in the worked hours:\\n')\n",
+    "    hours = float(hours)\n",
+    "except:\n",
+    "    print('Error: please type in a numerical value for the worked hours.\\n')\n",
+    "try:\n",
+    "    rate = input('Type in the rate:\\n')\n",
+    "    rate = float(rate)\n",
+    "    if hours > 40:\n",
+    "        salary = (hours-40) * 1.5 * rate + 40*rate\n",
+    "    else:\n",
+    "        salary = hours * rate\n",
+    "    print('The salary is',salary)\n",
+    "except:\n",
+    "    print('Error: please type in a numerical value for the rate.\\n')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "What is the punctuation? 0.0-0.1\n",
+      "0.75\n",
+      "Good\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 3.11 No.3\n",
+    "points = input('What is the punctuation? 0.0-0.1\\n')\n",
+    "\n",
+    "try:\n",
+    "    points = float(points)\n",
+    "except:\n",
+    "    points = -9999\n",
+    "\n",
+    "if points == -9999:\n",
+    "    print('Type in a numerical value')\n",
+    "elif points >= 0 and points <= 1:\n",
+    "    if points >= 0.9:\n",
+    "        print('Outstanding')\n",
+    "    elif points >= 0.8:\n",
+    "        print('Notable')\n",
+    "    elif points >= 0.7:\n",
+    "        print('Good')\n",
+    "    elif points >= 0.6:\n",
+    "        print('Suficient')\n",
+    "    elif points < 0.6:\n",
+    "        print('Insuficient')\n",
+    "else:\n",
+    "    print('Type a value between 0.0 and 1.0')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print('This is an update')"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
